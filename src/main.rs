@@ -8,7 +8,7 @@ error_chain! {
     }
 }
 
-fn main() -> Result<()>{
+fn main() -> Result<()> {
     let mut res = reqwest::blocking::get("http://httpbin.org/get")?;
     let mut body = String::new();
     res.read_to_string(&mut body)?;
